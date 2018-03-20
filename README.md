@@ -69,8 +69,57 @@ Create a .gitignore file inside the working directoy & entry these files into .i
     # git config --global core.excludesFile ~/my_git/opstree/.gitignore
     # vim .gitignore
  Enter the file we want to ignore  *.bkp , *.swp,*.pyc
+ 
     # git add -f .ignore
     # git commit -m "ignore file added"
 we can push ignore file to central repo 
     
     # git push origin master
+
+Assignment3:
+
+# Add remote name parent for ot-training/jenkins to your own repo.
+    
+     # git remote add parent https://github.com/ot-training/jenkins.git
+     
+# Check and verify two remotes.
+     # git remote -v 
+Above command display all the remote repo . 
+  
+# Git fetch changes from parent repo
+    # git fetch parent
+The above command pull all the branch info from the central repo to local repo .
+    # git branch -a                      (it will show both local and remote branch)
+    # git checkout -b parent/amulya      (switch to remote branch)
+    # git branch                         ( for showing present branch)
+# Git merge changes into your local branch from merge.
+    # git checkout branc1      (here branch1 = local branch)
+    # git merge parent/amulya   (here amulya is the branch that will present in remote )
+    # git push origin branch1    ( pushing changes to appear in remote)
+# Git pull changes from parent repo.
+    # git pull parent amulya
+  Here parent = remote repo name 
+       amulya = remote branch we want to pull
+    # git push origin br1    (push the recent pull data to br1)
+# Check for difference in fetch and pull 
+ Ans - in fetch it will pull the fresh copy of code from central repo to local repo but incase of pull it will do same thing which is done incase of fetch & also  merge that code into our local . 
+    i.e - git pull = git fetch + git merge
+ on the above step i already  fetch code from remote & pull the code fom remote & then it will automatically merge that code  in br1 , then push that code to br1
+
+Assignment4:
+# Rename remote name from parent to main
+    # git remote rename repo1 repo2
+  Here repo1 = old remote repo
+       repo2 = new remote repo
+# Remove main remote.
+    # git remote remove repo1
+
+Assignment5:
+# Save your answers in README.md into your repo.
+  Ans - i already do it please check and verify
+
+# Try to push README.md into parent repo.
+    # git commit -a -m "README.md file added & committed"
+    # git push parent master   (Here parent is remote url & master is branch in remote)
+# Create a pull request from your repo to master of parent repo.
+    
