@@ -123,3 +123,4 @@ Assignment5:
     # git push parent master   (Here parent is remote url & master is branch in remote)
 # Create a pull request from your repo to master of parent repo.
 ![screenshot from 2018-03-21 01-48-57](https://user-images.githubusercontent.com/29882428/37680482-1138fece-2caa-11e8-9ba4-f83fca4b819c.png)
+![screenshot from 2018-03-21 01-52-09](https://user-images.githubusercontent.com/29882428/37680650-8930cc4a-2caa-11e8-8cae-b347eedf094d.png)
