@@ -122,5 +122,4 @@ Assignment5:
     # git commit -a -m "README.md file added & committed"
     # git push parent master   (Here parent is remote url & master is branch in remote)
 # Create a pull request from your repo to master of parent repo.
-    
-![pull request](https://user-images.githubusercontent.com/29882428/37680084-daa0d0cc-2ca8-11e8-826f-8e550e6d376a.png)
+![screenshot from 2018-03-21 01-48-57](https://user-images.githubusercontent.com/29882428/37680482-1138fece-2caa-11e8-9ba4-f83fca4b819c.png)
