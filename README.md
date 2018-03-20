@@ -68,7 +68,7 @@ Create a .gitignore file inside the working directoy & entry these files into .i
     # touch .gitignore
     # git config --global core.excludesFile ~/my_git/opstree/.gitignore
     # vim .gitignore
- Entry the file we want to ignore  *.bkp , *.swp,*.pyc
+ Enter the file we want to ignore  *.bkp , *.swp,*.pyc
     # git add -f .ignore
     # git commit -m "ignore file added"
 we can push ignore file to central repo 
