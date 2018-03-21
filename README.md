@@ -207,7 +207,8 @@ Ans - simply we do rever that commit
           4. go to remote branch
               # git checkout -b remote/br1
   # make a script in which you will pass a git repo path and it will generate a html report of last 5 days commits. html report should contain all info(commit message,commit ID,author name,Commit Date)  
-  Ans - please follow html.sh  
+  
+  Ans - please follow html.sh  & html report will be stored in report.html file
   
 # Day 3   
 # Assignment1:
