@@ -207,6 +207,42 @@ Ans - simply we do rever that commit
           4. go to remote branch
               # git checkout -b remote/br1
   # make a script in which you will pass a git repo path and it will generate a html report of last 5 days commits. html report should contain all info(commit message,commit ID,author name,Commit Date)  
+  Ans - please follow html.sh  
   
-              
+# Day 3   
+# Assignment1:
 
+# Create account on each Github,Gitlab & Bitbucket Try to findout key features and major differences between all. 
+Ans : -  Both  GitLab ,GitHub & Bitbucket provide git repository hosting service .
+   
+   Git lab - 
+     1. purely opensource & allows us to setup own private git remote server 
+     2. it allows unlimited private repository for free 
+     3. it is less popular than Github
+     4. it provides its own CI tools for SDLC namely gitlab CI
+     5. sharing features called as snippet like gist in github
+     6. code are stored in the name of project not repo
+     7. user mangement can be done efficiently by adding user to group  we define specific roles and access to each group
+   
+   GitHub - 
+      - Is only hosts projects that use the Git VCS
+      - It is free for public repository and for private repo we have to pay
+      - GitHub is written using Ruby 
+      - sharing feature is called gist
+      - It comes with its own Wiki and issue tracking system.
+      - permission is simple we have to decide wheteher giving access to user or not 
+      - It  is largest repository 
+      - It has size limitations. The file size can’t be more than 100 Mb while the repository can host 1Gb of information
+      - Email notifications
+
+   Bitbucket - 
+       - User friendly environment 
+       - Bitbucket Cloud has Mercurial support. 
+       - it also offers free private repositories so only members can access the codebase.
+       - sharing features called as snippet like gist in github
+       - permission management can be done in the form of team
+       
+# Assignment2:
+# Check for organization and repository level permission for team and users over repositories and branches.
+
+     
