@@ -196,8 +196,8 @@ Ans - simply we do rever that commit
        
  # Try to list all the cases, where you can use checkout in GIT
    Ans : - 
+          
           1. for switching one branch to another  
-             
              # git checkout branch1
           2. for clear unstaged changes
              # git checkout -- sample.txt  ( clear changes only in sample file)
