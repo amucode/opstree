@@ -124,3 +124,10 @@ Assignment5:
 # Create a pull request from local repo branch4 to remote repo(parent) of br1 
 ![screenshot from 2018-03-21 01-48-57](https://user-images.githubusercontent.com/29882428/37680482-1138fece-2caa-11e8-9ba4-f83fca4b819c.png)
 ![screenshot from 2018-03-21 01-52-09](https://user-images.githubusercontent.com/29882428/37680650-8930cc4a-2caa-11e8-8cae-b347eedf094d.png)
+
+# Assignment6:
+#Create tags in your repo.
+  Ans - In git there is two types tag generally we use 
+     1 - lightweight tag (it is use for temorary purpose & A lightweight tag is very much like a branch that doesn’t change — it’s just a pointer to a specific commit.)
+     2 - annotated tag (Annotated tags, however, are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message)
+     
