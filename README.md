@@ -89,6 +89,7 @@ Above command display all the remote repo .
 # Git fetch changes from parent repo
     # git fetch parent
 The above command pull all the branch info from the central repo to local repo .
+    
     # git branch -a                      (it will show both local and remote branch)
     # git checkout -b parent/amulya      (switch to remote branch)
     # git branch                         ( for showing present branch)
@@ -126,8 +127,32 @@ Assignment5:
 ![screenshot from 2018-03-21 01-52-09](https://user-images.githubusercontent.com/29882428/37680650-8930cc4a-2caa-11e8-8cae-b347eedf094d.png)
 
 # Assignment6:
-#Create tags in your repo.
+# Create tags in your repo.
   Ans - In git there is two types tag generally we use 
      1 - lightweight tag (it is use for temorary purpose & A lightweight tag is very much like a branch that doesn’t change — it’s just a pointer to a specific commit.)
      2 - annotated tag (Annotated tags, however, are stored as full objects in the Git database. They’re checksummed; contain the tagger name, email, and date; have a tagging message)
      
+    # git tag -a v1.0 -m "tag added for branch4"
+ # Push tags into remote repo.   
+    # git push origin v1.0 
+    # git tag   (only list the tags)
+    # git show v1.0   ( for seeing details)
+    
+ # Create tag on a one day old commit.
+    First we have to identify specific commit id
+    # git log -v
+    # git tag -a tag_20-03-18 d76b9cd2b795258fc8e218b1ddafe68ae848baee -m "taging a specific commit of date 20"
+    # git push origin tag_20-03-18
+ # Checkout to a tag.
+    First identify current branch
+    # git branch 
+    # git checkout v1.0   ( checkout to tag name v1.0)
+    # git branch  ( it will show current head in tag)
+    
+ # Clone a repo with tag name
+    # git clone  https://github.com/apmalla/opstree.git tag_20-03-18
+    it will clone particular tag namely tag_20-03-18 and a directory will created in the name of tag_20-03-18
+ # Clone a repo with specific branch
+    # git clone -b br1 https://github.com/apmalla/opstree.git 
+    
+    
