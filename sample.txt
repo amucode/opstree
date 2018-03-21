@@ -1,2 +1,3 @@
 Hey team  i am writing a shell script for merge conflict resolution plz check and verify
 i am creating a tag for sample file
+reset added
