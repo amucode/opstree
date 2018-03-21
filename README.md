@@ -155,4 +155,58 @@ Assignment5:
  # Clone a repo with specific branch
     # git clone -b br1 https://github.com/apmalla/opstree.git 
     
+ # Clone a repo of a specific commit.
+   For this we have fetch the info of that paricular commit and generate a archive file according to you .
+   
+    # git archive -o repo.tar.gz cc323e8363aa1e9901d5f59dcc4dc986ee604
+
+Assignment7:
+# Create git alias for different commands
+   Go to .gitconfig file write below things
+     
+     [alias]
+        st = status
+        log = log -v
+        commit = commit -a
+            or 
+      # git config --global alias.st status
+      # git config --global alias.log log -v
+      # git config --global alias.commit commit -a
     
+    here we are creating alias st for status instead of status we can use st
+
+# Share your aliases in alias.md
+    please check and verify alias.md
+# A developer is working on a feature on a branch, unfortunately he/she made a wrong commit. How would he/she recover from this situation without cleaning the working directory.
+
+Ans - simply we do rever that commit 
+      
+      # git revert 8e21ba5f6c8842946fb9252651e6c49187f496f4
+     the above command add a extra revert commit 
+     # git revert -n 8e21ba5f6c8842946fb9252651e6c49187f496f4
+     it will not commited we have to commit it manually . 
+# You are working on a branch of a project. After modification, you thought that these modifications are quite less important but will work on later and for the time being, you should do some other implementation on the project using other branch. Is there any way to save your previous state of modification and get back it when required?
+
+  Ans - we can simply use stash for that 
+       
+       # git stash 
+     For getting that file again 
+       # git stash list    (it will show all the stashed file)
+       # git stash pop <stash id>  ( for get back particular stash)
+       
+ # Try to list all the cases, where you can use checkout in GIT
+   Ans : - 
+          
+          1. for switching one branch to another  
+             # git checkout branch1
+          2. for clear unstaged changes
+             # git checkout -- sample.txt  ( clear changes only in sample file)
+             # git checkout -- . ( it will clear all the changes)
+          3. pointing head to specific commit
+             # git checkout 8e21ba5f6c8842946fb9252651e6c49187f496f4
+          4. go to remote branch
+              # git checkout -b remote/br1
+  # make a script in which you will pass a git repo path and it will generate a html report of last 5 days commits. html report should contain all info(commit message,commit ID,author name,Commit Date)  
+  
+              
+
