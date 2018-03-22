@@ -246,4 +246,80 @@ Ans : -  Both  GitLab ,GitHub & Bitbucket provide git repository hosting service
 # Assignment2:
 # Check for organization and repository level permission for team and users over repositories and branches.
 
-     
+ Ans - organization in github is something like a company where we create multiple repos and project , we are invite member to join our oraganization to perform all git operations . permission in git is something very clear there is only three permission i.e - admin , read & write 
+ admin - all oeration within particular repo with adding other collaborator 
+ read -  can clone,pull,fetch the code
+ write - will do clone,pull,push,fetch the code 
+team consist of group of members that can allow to access the repo . 
+
+branching permission - we created protected branch for restrict specific user to push code to the branch . 
+
+# Assignment3:
+
+# Create a test repo in your github account, write some demo commits.
+  Ans - i have already created repo namely bootcamp in my git hub account 
+# Add this test repo as submodule inside your jenkins repo.
+    # git submodule add git@github.com:apmalla/bootcamp.git test
+     Here test is destination directory
+    it create a .gitmodules directory in our repo 
+    # git submodule init  (it will initializa .git directory within that folder)
+    # git submodule update ( it will update .gitmodule dir within parent git repo)
+    # cd test
+    # echo > test.txt
+    # git commit -a -m "sub module file added"
+    # git push origin master   ( pushing the code to submodule repo)
+# Clone jenkins repo with submodule.
+    # git clone --recursive git@github.com:apmalla/bootcamp.git test  (clone bootcamp repo with name bootcamp)
+# Configure & setup gitolite server to host private git server.
+# Add user based permissions over your repositories and branches.
+Ans - it is a a authorization layer on top of git for giving access permission to specific user. & also host private hosting git server for internal communication within organization 
+      
+    Generate ssh key for user & copy public key to gitolite home directory
+      # ssh-keygen 
+      # scp gitolite.pub amulya@localhost:/home/gitolite/
+    Go to server where you want to create git server  
+      # apt-get install gitolite3 
+      # useradd amulya
+      # passwd amulya
+      # chown -R amulya:amulya /home/amulya
+      # su - gitolite
+      # gitolite setup -pk amulya.pub
+    Go to client   
+      # git clone amulya@localhost:gitolite-admin
+      # cd gitolite-admin
+      # ls -l
+    There is two directory one is keydir and other is conf directory
+    Key  - it stores all the users public key
+    conf - stores the repo acess policy such as admin,read & write
+      # vim conf/gitolite.conf
+       
+       @admin      = amulya
+       @staff      = user1
+        
+        repo gitolite-admin
+        RW+     = gitolite @admin
+
+        repo project1
+        RW+     = @all
+
+        repo project2
+        RW+     = amulya @admin
+        R       = @staff
+       # git commit conf/gitolite.conf -m “added new config”
+       # git push origin master
+       
+# Create repository inside gitolite server, and clone, add, commit, push into that.
+    # git remote add bootcamp git@192.168.0.19:gitolite/bootcamp.git
+    # git status
+    # vim conf/gitolite.conf
+       
+       @admin      = amulya
+       @staff      = user1
+       
+       repo bootcamp
+        RW+     = amulya @admin
+        R       = @staff
+     # git add .  
+     # git commit -m "new reomte added"
+     # git push origin master 
+Go to server side and verify repository . 
